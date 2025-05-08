@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            ServusTV Adblocker
 // @name:de         ServusTV Werbeblocker
-// @version         1.0.0
+// @version         1.0.1
 // @description     Blocks Banner, Preroll & Midroll Ads on ServusTV.com
 // @description:de  Blockiert Banner, Preroll & Midroll Werbungen auf ServusTV.com
 // @icon            https://external-content.duckduckgo.com/ip3/www.servustv.com.ico
@@ -31,7 +31,7 @@
         }
 
         while (true) {
-            if (document.querySelector(".theatre-mode>div>picture")) {
+            if (document.querySelector(".theatre-mode>div>picture") && document.querySelector(".theatre-mode>div>div + div div")) {
                 break;
             }
 
