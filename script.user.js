@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            ServusTV Adblocker
 // @name:de         ServusTV Werbeblocker
-// @version         1.0.3
+// @version         1.0.4
 // @description     Blocks Banner, Preroll & Midroll Ads on ServusTV.com
 // @description:de  Blockiert Banner, Preroll & Midroll Werbungen auf ServusTV.com
 // @icon            https://external-content.duckduckgo.com/ip3/www.servustv.com.ico
@@ -53,7 +53,7 @@
         data = await data.json();
 
         const iframe = document.createElement("iframe");
-        iframe.src = `https://www.m3u8player.online/embed/m3u8?url=${encodeURIComponent(data.videoUrl)}`;
+        iframe.src = `https://www.m3u8player.online/embed/dash?url=${encodeURIComponent(data.videoUrl)}`;
         iframe.width = "100%";
         iframe.height = "100%";
         iframe.style.border = "none";
